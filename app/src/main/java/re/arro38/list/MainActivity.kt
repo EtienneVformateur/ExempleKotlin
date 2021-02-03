@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         val arrayButton = arrayOf(binding.r1,binding.r2,binding.r3,binding.r4)
-        val listReponse1 = listOf("Shake event", "b", "c","d")
+        val listReponse1 = listOf("Shake event", "ListView", "c","d")
         for (i in arrayButton.indices){
             arrayButton[i].text = listReponse1[i]
         }
@@ -26,5 +26,8 @@ class MainActivity : AppCompatActivity() {
             start<ShakeActivity>()
         }
 
+        binding.r2.setOnClickListener{
+            start<ListviewExampleActivity>()
+        }
     }
 }
